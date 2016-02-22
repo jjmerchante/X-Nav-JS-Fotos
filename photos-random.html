@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random photo</title>
+  </head>
+  <body>
+    <a href="javascript:randomPhoto()"><button>Random photo</button></a>
+    <div id="randomPhoto"></div>
+
+
+    <script type="text/javascript">
+      urlsImages = [
+        "http://i.blogs.es/876c6c/15996662264_4088cd1e53_o/original.png",
+        "http://www.asociacionaepi.es/wp-content/uploads/2013/11/400px-WikiBookTitel_JavaScript.jpg",
+        "http://etraining.mx/images/javascript.png",
+        "http://www.asociacionaepi.es/wp-content/uploads/2013/12/JavaScriptLogo.png",
+        "http://www.manejandodatos.es/wp-content/uploads/2015/03/javascript.png",
+        "http://www.labs.hp.com/research/info_theory/AlbertWeb/fullsize/B%29%20Corrupted%20by%20random%20noise,%20bit%20error%20rate%3D0.020.gif",
+        "https://s-media-cache-ak0.pinimg.com/564x/a1/e3/6b/a1e36bcb8ce179bd8cc8db28ff4ef6fb.jpg",
+      ]
+      randomPhoto = function(){
+        var element = document.getElementById('randomPhoto');
+        var urlImg = urlsImages[Math.floor(Math.random() * urlsImages.length)];
+        var img = '<img src="' + urlImg + '" alt="Wait random photo" width="200" />'
+        element.innerHTML = img
+      }
+    </script>
+  </body>
+</html>
